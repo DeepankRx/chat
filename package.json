@@ -1,0 +1,29 @@
+{
+  "name": "chat-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "clever-bot-api": "^1.4.2",
+    "express": "^4.17.1",
+    "google": "^2.1.0",
+    "mongoose": "^6.1.1",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeepankRx/StudentChatBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeepankRx/StudentChatBot/issues"
+  },
+  "homepage": "https://github.com/DeepankRx/StudentChatBot#readme"
+}

@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/styles.css")
+        title Details Page
+        style.
+            #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+            }
+            table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            }
+            th, td {
+            text-align: left;
+            padding: 8px;
+            }
+            tr:nth-child(even) {background-color: #f2f2f2;}
+            #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+            #customers tr:hover {background-color: #ddd;}
+
+
+    body
+        .navbar
+            ul
+             li
+               a.active(href='/') Home
+             li
+               a(href='/login') Login
+             li
+               a(href='/details') Details
+             li
+               a(href='https://deepankrx.github.io/' target='_blank') My Portfolio
+        div
+            table(id="customers")
+                thead 
+                    th Question Asked By The Student
+                tbody
+                    if(ques!=null)
+                        each val, index in ques
+                            tr 
+                                td #{ques[index][1].query}
+                    else
+                        td No Data Found
