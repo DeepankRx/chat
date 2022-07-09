@@ -10,6 +10,6 @@ db.once('open', function () {
 });
 //connecting to mongoDb
 let URI = "mongodb+srv://deepank:passwordforbot@cluster0.wopim.mongodb.net/ChatBot?retryWrites=true&w=majority";
-// let URI = "mongodb://localhost:27017/botDb";
+
 mongoose.connect(URI);
 module.exports = db;

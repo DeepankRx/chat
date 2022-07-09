@@ -1,4 +1,4 @@
-
+//importing the required modules
 const mongoose = require('mongoose');
 const express = require("express");
 const http = require('http');
@@ -9,19 +9,19 @@ const {details, questions, admin, questionsAsked,studentId} = require('./models/
 const {db} = require('./database/db_connection');
 const app = express();
 
+//creating the server
 const server = http.createServer(app);
 app.use(express.urlencoded(true))
 
+//mongoDb url
 let URI = "mongodb+srv://deepank:passwordforbot@cluster0.wopim.mongodb.net/ChatBot?retryWrites=true&w=majority";
 
 mongoose.connect(URI);
 app.use(express.urlencoded(true))
-
 app.use(express.static(__dirname + '/static/'));
-
 app.set('view engine', 'pug')
-
 app.set('views', path.join(__dirname, 'views'))
+
 
 app.get('/', (req, res) => {
     res.render('index');
